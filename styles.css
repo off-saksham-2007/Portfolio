@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #e0e0ff;
+    background: linear-gradient(135deg, #0f0f2d 0%, #1a1a40 100%);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+header {
+    padding: 30px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(15, 15, 45, 0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #d0d0ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.cv-btn {
+    background: #6366f1;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.cv-btn:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+}
+
+.cv-btn.large {
+    padding: 16px 40px;
+    font-size: 1.1rem;
+}
+
+.hero {
+    padding: 140px 0 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 620px;
+}
+
+.greeting {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 24px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.avatar-wrapper {
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid rgba(99, 102, 241, 0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    transition: transform 0.4s;
+}
+
+.avatar:hover {
+    transform: scale(1.08) rotate(3deg);
+}
+
+.section {
+    padding: 120px 0;
+}
+
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 3.2rem;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    border-color: #6366f1;
+}
+
+.project-placeholder {
+    height: 220px;
+    background: linear-gradient(45deg, #2d2d5a, #1a1a40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.project-card h3 {
+    padding: 24px 24px 8px;
+}
+
+.project-card p {
+    padding: 0 24px 32px;
+    opacity: 0.8;
+}
+
+.about {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.contact-btn {
+    background: rgba(255,255,255,0.08);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.contact-btn:hover {
+    background: #6366f1;
+}
+
+footer {
+    padding: 60px 0 40px;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.95rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 100px 0 140px;
+    }
+    h1 {
+        font-size: 3.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avatar {
+        width: 240px;
+        height: 240px;
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+    }
+}
